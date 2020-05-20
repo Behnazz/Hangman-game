@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Hangman Game</title>
+</head>
+
+<body>
+  <h1 class="h1-title">Hangman</h1>
+  <p>Find the hidden word. Enter a letter</p>
+  <section class="game-container">
+    <svg height="250" width="200" class="figure-container">
+      <!-- Rod-->
+      <line x1="60" y1="20" x2="140" y2="20" />
+      <line x1="140" y1="20" x2="140" y2="50" />
+      <line x1="60" y1="20" x2="60" y2="230" />
+      <line x1="20" y1="230" x2="100" y2="230" />
+      <!-- Head -->
+      <circle cx="140" cy="70" r="20" class="figure-part" />
+      <!-- body -->
+      <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+      <!-- arms -->
+      <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+      <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+      <!-- legs -->
+      <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+      <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+    </svg>
+    <section class="wrong-letters-container">
+      <div id="wrong-letters"></div>
+    </section>
+    <section class="word" id="word"></section>
+  </section>
+  <!-- container for final messages -->
+  <section class="popup-container" id="popup-container">
+    <div class="popup">
+      <h2 id="final-message"></h2>
+      <button id="play-again">Play Again</button>
+    </div>
+  </section>
+  <!-- Notifications -->
+  <div class="notification-container" id="notification-container">
+    <p class="notification-paragraph">You have already entered this letter</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
