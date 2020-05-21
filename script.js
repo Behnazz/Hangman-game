@@ -6,6 +6,8 @@ const notification = document.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
 const figureParts = document.querySelectorAll(".figure-part");
 
+function wrapper() {
+
 let words = [];
 let selectedWord;
 const correctLetters = [];
@@ -70,7 +72,7 @@ const updateWrongLettersEl = () => {
   });
   //check lost 
   if (wrongLetters.length === figureParts.length) {
-    finalMessage.innerText = 'Unfortunately you lost :|';
+    finalMessage.innerText = `Unfortunately you lost.The answer was ${selectedWord}`;
     popup.style.display = 'flex';
   };
 }
@@ -113,3 +115,6 @@ playAgainBtn.addEventListener('click', async () => {
 });
 
 getRandomWord();
+}
+
+wrapper();
